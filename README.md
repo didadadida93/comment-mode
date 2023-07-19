@@ -34,17 +34,37 @@ require('comment-mode').init()
 
 By default it will turn off the comment mode.
 
-
 https://github.com/nvim-lua/kickstart.nvim/assets/25358436/f9f37e92-4306-4dcd-bd85-bdd994131997
 
-#### You can toggle comment mode
+##### you can toggle comment mode
 
 ```
 :ToggleCommentMode
 ```
 
-#### Or set a keymap to toggle comment mode
+##### or set a keymap to toggle comment mode
 
 ```lua
 vim.keymap.set('n', '<your keymap>', require('comment-mode').toggle_comment_mode, {})
 ```
+
+##### comment-mode is also come with [lualine](https://github.com/nvim-lualine/lualine.nvim) component
+
+```lua
+sections = {
+  lualine_x = {
+    require('comment-mode').comment_mode_component,
+  },
+}
+```
+
+https://github.com/didadadida93/kickstart.nvim/assets/25358436/3fe6ef2b-bddb-4df3-be16-e8aa36bf856c
+
+---
+
+```lua
+vim.g.commentmode = true -- set comment mode `on` when starting nvim
+```
+
+# Contribution
+All contribution are welcome! Open issue, pull request, etc.
