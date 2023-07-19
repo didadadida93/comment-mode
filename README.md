@@ -36,3 +36,15 @@ By default it will turn off the comment mode.
 
 
 https://github.com/nvim-lua/kickstart.nvim/assets/25358436/f9f37e92-4306-4dcd-bd85-bdd994131997
+
+#### You can toggle comment mode
+
+```
+:ToggleCommentMode
+```
+
+#### Or set a keymap to toggle comment mode
+
+```lua
+vim.keymap.set('n', '<your keymap>', require('comment-mode').toggle_comment_mode, {})
+```
