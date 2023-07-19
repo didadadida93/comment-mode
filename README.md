@@ -28,7 +28,7 @@ Once installed, call `init` function to setup `autocmd` and `user command`. It a
 
 ```lua
 -- init.lua
--- ...other configutarion
+-- ...other configuration
 require('comment-mode').init()
 ```
 
